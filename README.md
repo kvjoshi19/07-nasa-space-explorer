@@ -12,7 +12,7 @@ I learned how to make real API calls using fetch() and handle the response data 
 
 # Challenges I solved:
 
-One challenge was where the date range wasn't being validated, so I added a validation check that calculates the difference in days between the selected start and end dates. If the range exceeds 30 days, it blocks the fetch and shows a warning message to the user instead.
+One challenge was controlling how much data the app could request at once, so I added a validation check that calculates the difference in days between the selected start and end dates. If the range exceeds 30 days, it blocks the fetch and shows a warning message to the user instead.
 
 A large date range means a huge number of results in a single request. Without a cap, a user could accidentally (or intentionally) request years worth of data, which could slow or crash the browser tab, and risks hitting NASA's API rate limits.
 
