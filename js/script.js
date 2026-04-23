@@ -27,6 +27,11 @@ fetchBtn.addEventListener('click', async () => {
     status.textContent = '⚠ Start date must be before or equal to end date.';
     return;
   }
+  const dayDiff = (new Date(end) - new Date(start)) / (1000 * 60 * 60 * 24);
+  if (dayDiff > 30) {
+    status.textContent = '⚠ Please select a range of 30 days or fewer.';
+    return;
+  }
  
   status.textContent = '🔄 Loading space photos…';
   fetchBtn.disabled = true;
